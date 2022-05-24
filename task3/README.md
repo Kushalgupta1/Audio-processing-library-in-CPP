@@ -7,7 +7,11 @@ by Kushal Kumar Gupta, 2020CS10355
 
 Implementing a deep neural network (DNN) inference for classifying across 12 audio keywords (silence, unknown, yes, no, up, down, left, right, on, off, stop, go). 
 
+- A usual ML classification pipeline consists of feature extraction followed by a (fully connected) classifier. We have provided the tensorflow based python script compute_mfcc.py to extract features from the given audio samples. To ease the feature extraction process, you are not required to setup a python environment and extract the features. We also provide you the extracted feature in `mfcc_features.zip`, which you can directly use in further computations.
 
+- The weights (and bias) for various FC components are given in `dnn_weights.h`, in row major order.
+
+- The SoftMax output for various samples is given in `softmax_output.csv`. You can refer this to validate your results.
 #### Source Code description and functionalities:
 
 Stitched together Fullyconnected (using MKL Library for matrix multiplication) from subtask 2 and Relu and SoftMax from subtask 1 to implement a DNN which takes a [1x250] input features vector for a 1 second audio sample from the specified input file and applies-
